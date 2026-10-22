@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class CellPhone {private int serial = 9999999;
+public class CellPhone {
     private int serialNumber;   // a whole number, ex: 1000000 - 9999999
     private String model;       // ex: iPhone X
     private String carrier;     // ex: AT&T

@@ -4,37 +4,37 @@ import java.util.Scanner;
 
 public class CellPhoneApplication {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
         CellPhone cellPhone1 = new CellPhone();
         CellPhone cellPhone2 = new CellPhone();
 
         // Create a scanner object to read user input
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+
 
         // ---- Phone 1 ----
         System.out.println("Enter the information for CellPhone 1:");
         // Prompt user for cell phone information and set the properties
         System.out.print("What is the serial number? ");
-        int serialNumber = scanner.nextInt();  // Read integer value
+        int serialNumber = input.nextInt();  // Read integer value
         cellPhone1.setSerialNumber(serialNumber);
-        scanner.nextLine();  // Consume newline: nextInt() leaves the Enter key in the buffer,
+        input.nextLine();  // Consume newline: nextInt() leaves the Enter key in the buffer,
         // and without this line the next nextLine() would read an empty answer
 
         System.out.print("What model is the phone? ");
-        String model = scanner.nextLine();  // Read entire line till newline (keeps spaces, ex: iPhone 15 Pro Max)
+        String model = input.nextLine();  // Read entire line till newline (keeps spaces, ex: iPhone 15 Pro Max)
         cellPhone1.setModel(model);
 
         System.out.print("Who is the carrier? ");
-        String carrier = scanner.nextLine();
+        String carrier = input.nextLine();
         cellPhone1.setCarrier(carrier);
 
         System.out.print("What is the phone number? ");
-        String phoneNumber = scanner.nextLine();
+        String phoneNumber = input.nextLine();
         cellPhone1.setPhoneNumber(phoneNumber);
 
         System.out.print("Who is the owner of the phone? ");
-        String owner = scanner.nextLine();
+        String owner = input.nextLine();
         cellPhone1.setOwner(owner);
 
         // ---- Phone 2 ----
@@ -44,28 +44,28 @@ public class CellPhoneApplication {
         System.out.println("Enter the information for CellPhone 2:");
         // Prompt user for cell phone information and set the properties
         System.out.print("What is the serial number? ");
-        serialNumber = scanner.nextInt();  // Read integer value
+        serialNumber = input.nextInt();  // Read integer value
         cellPhone2.setSerialNumber(serialNumber);
-        scanner.nextLine();  // Consume newline
+        input.nextLine();  // Consume newline
 
         System.out.print("What model is the phone? ");
-        model = scanner.nextLine();  // Read entire line till newline
+        model = input.nextLine();  // Read entire line till newline
         cellPhone2.setModel(model);
 
         System.out.print("Who is the carrier? ");
-        carrier = scanner.nextLine();
+        carrier = input.nextLine();
         cellPhone2.setCarrier(carrier);
 
         System.out.print("What is the phone number? ");
-        phoneNumber = scanner.nextLine();
+        phoneNumber = input.nextLine();
         cellPhone2.setPhoneNumber(phoneNumber);
 
         System.out.print("Who is the owner of the phone? ");
-        owner = scanner.nextLine();
+        owner = input.nextLine();
         cellPhone2.setOwner(owner);
 
         // Close the scanner: we are done reading input
-        scanner.close();
+        input.close();
 
         // Print both phones with one reusable method instead of repeating five println lines twice
         display(cellPhone1);
